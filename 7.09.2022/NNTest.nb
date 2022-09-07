@@ -1,0 +1,1622 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     71234,       1614]
+NotebookOptionsPosition[     69156,       1571]
+NotebookOutlinePosition[     69505,       1586]
+CellTagsIndexPosition[     69462,       1583]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"d1s", " ", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<H:\\\\Documents\\\\digits Kulikov NORM FILES\>\"", ",", 
+     "\"\<1.*.bmp\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"d2s", " ", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<H:\\\\Documents\\\\digits Kulikov NORM FILES\>\"", ",", 
+     "\"\<2.*.bmp\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"d3s", " ", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<H:\\\\Documents\\\\digits Kulikov NORM FILES\>\"", ",", 
+     "\"\<3.*.bmp\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.8715279280056834`*^9, 3.8715280906436253`*^9}, {
+  3.8715281442645655`*^9, 3.8715281934640427`*^9}, {3.8715282851303186`*^9, 
+  3.8715283122064238`*^9}, {3.871528829337874*^9, 3.8715288541499805`*^9}, {
+  3.871529127429427*^9, 
+  3.8715291316635137`*^9}},ExpressionUUID->"01a72773-6b15-4da7-902f-\
+7213409d1139"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"digitsLearn", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", 
+     RowBox[{"{", "}"}], ",", 
+     RowBox[{"{", "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
+    RowBox[{"i", "\[LessEqual]", " ", 
+     RowBox[{"Length", "[", "d1s", "]"}]}], ",", " ", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", "\t", 
+    RowBox[{
+     RowBox[{"AppendTo", "[", 
+      RowBox[{
+       RowBox[{"digitsLearn", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], ",", 
+       RowBox[{"d1s", "[", 
+        RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
+    RowBox[{"i", "\[LessEqual]", " ", 
+     RowBox[{"Length", "[", "d2s", "]"}]}], ",", " ", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", "\t", 
+    RowBox[{
+     RowBox[{"AppendTo", "[", 
+      RowBox[{
+       RowBox[{"digitsLearn", "[", 
+        RowBox[{"[", "2", "]"}], "]"}], ",", 
+       RowBox[{"d2s", "[", 
+        RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
+    RowBox[{"i", "\[LessEqual]", " ", 
+     RowBox[{"Length", "[", "d3s", "]"}]}], ",", " ", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", "\t", 
+    RowBox[{
+     RowBox[{"AppendTo", "[", 
+      RowBox[{
+       RowBox[{"digitsLearn", "[", 
+        RowBox[{"[", "3", "]"}], "]"}], ",", 
+       RowBox[{"d3s", "[", 
+        RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}], 
+  ";"}], "\[IndentingNewLine]", "digitsLearn", "\[IndentingNewLine]"}], \
+"Input",
+ CellChangeTimes->{{3.8715290178594704`*^9, 3.871529084713846*^9}, {
+  3.8715291603971577`*^9, 
+  3.871529532762998*^9}},ExpressionUUID->"0a3dee17-74d2-4be8-80d6-\
+22cf1ec09368"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJzt2DEKwjAUxvGHLh29gldwcu3oWvEALcbiEiEVxC1Hy800JYppo/gG6Yvw
+/aGlzfSDpE3psjlVhxkRdYU/VfWlNKa+bhf+Zqe7Y6vVfqPPqlVm3cz94Opx
+9Nc3hND/55zzj7O1VhoyiJ5JQwZBxcwvpwxVFCVteZWhKp6+TFQjUg6qlCSu
+ekuSVY1I4m+G1BPGp1eFnTct3ounV30liag+zZqsihNU/KDiBxU/qPhBxQ8q
+flDxC187uf2TQQghhNAPuwMXxKg/
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJzt2L0KwjAUhuGgS8eOjnoLTq6OrhXBtcVYXSKkgngFvQwvw0tz1HjicJbA
+51Cq9HugpT9DXjh0SGfVqdiPjDFNFk5FeVl6X17XebjZuOZYO7tbubOtrV9U
+4/Bw/jne10+iXt3FVLkJVv1L1UQYJROs0uLsTAKrdE8uWJUqid9+qiTaimFW
+IfPSHmKYVcjUtK57WPWtVuh1DyK+ZRWOVThW4ViFYxWOVThW4ViFYxWOVbjf
+rIr/0FiF0DsgvffpF6uIuvACCehW/A==
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJzt2LEOgjAQgOFGl46OjPgKTo644YoxYYWI1AUJmBgnRh6BR+HRGLVYLGAT
+c5PX4f4EAkxfrgvtOr4G5wVjrOTyFkT3XVFEj8NKvhyz8pJmyWmf3ZI0Kbbx
+Un7cDFf//KT+XtM0nufVdY0NGZMk9o5zjm0ZcxyHfcK2DOlBWaWaDsoSVdu2
+bB62qO9rUDaozEHZoDIHha6qqkpLhBDoKrlwrutqRhiG8iO6arpwvu93XYer
+MqekSLgqc+F0iCr5S2BOCV31I1LBIxU8UsEjFTxSwSMVPFLBIxU8UsGzU8U5
+VyqrjvvyPFcqq4775JZHjwvbMkvty4QQ2BCKoijKxl73o2u1
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztmLFugzAQQK12YWRkpH+AMnXtRtdUlVgTlYYsVCKVok6MfAKfwcgn8QmM
+9FKiy5W0rqu03A33JBDYCJ58p8P2zfpl+XxljNl5cFqu9ndFsXp78OHmMd9t
+N3n6dJ+/ppu0uF1fQ+PieByuh8soy9J84Hneha/6K+q6NgRunSNBEEizwtjJ
+sTpXYrei6RTHsRArTCdQ6vteghWNHShBC7sVjV2SJGMjr1XXdVAqaezYrdq2
+DcNw/HoURajEa0ULZtM0tIvLalIKJr1cVjhQmOHsVpBRk1IgwYpm1JcPzG9F
+MyrLMglWEDvf9y0ZxWKFBeq7jGKxqqrKHjsWK0fUyh21cket3FErd9TKHbVy
+R6AVnT9zu5z4cf7MAirZ52AzI3CgBrVyhq7LuF1O2Ff6XOBAWdZl8yMwfINa
+/Qa1cge3lLlFPjFuj4j6L/8r74ntuD8=
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJzt2D8KwjAUx/GHLo5ewSs4uTq6VjxAi7G4RGgFccvRcjNNiX9eWi1xeg/5
+faGl7fQhIU3pojoVhwkRtbNwKsrLumnK63Yebna2PdbW7Df2bGrTrKppeLh8
+HN31DSH0e977sHycc9KQJHomDUlSqAoTp1BFLGnLO4UqPn16VJQmzenqDZQS
+FQ2SFn0YKA2qlyRuNxpUvTenEhUfKCWq4RYjruKkOFDiKk7iX1NSKr7QaPCB
+J6Uafy9Jqb7NnaxqPKjygyo/qPKDKj+o8ov7kbZ/MgghhBD64+4YQZiU
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJzt0jEKAjEQheGgzZSWab2ClWUsbVc8wC7GjU2ErCCeIMfIMXI8jaBIutdl
+wffBhGSqv8h6uHbnhVJqknJ0/X0XQv84rMrj6KfL6O1p7292tGE7LMty85n3
+/Un/LedsjEkptQ6paK3L5xSR1iEV9dU6pMIqHKtwrMKxCscqHKtwrMKxCscq
+HKtwrMKxCscqHKtwrMKxCjfPKhGZYVWMsSQ551qHEBHRzwubyPBp
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztlzFuhDAQRa2kcUlJmVwhVdp0pN0oEu2ulixpiMRGilJRcgRKjsHRKNkh
+IGuCwHaDvws/CQSG4mn4M8KPp6/Dx50Q4irpdDj+vJTl8fctopv34vp5KbLz
+a/GdXbLy+XRPi0/zMV4PASd0XffwR9u2aJcZUoqiMSSElBKtMxPHsWCgdUaq
+qhL/QRutKGGtpngrkyRJfLDiWSKlvu/hVk3TKIc0TUmJFuFWqlCkpBaxVpQo
+JTBVCW7FB+ZCAGjFQ57nuSdWW0r8szpW4q23eMRr6NhqtfUmtmq4N7xQvPUW
+Vi6VBm2hUFZbMwprZQwzxMoYZvdWxlmkmRj7wf+jVl/QN8JO1HVt+flWGwEF
+alhpgITKCCRURkKo7AlWloQGtCc0oD3ByhLgHlADcA+oQSk53gPq8bBQQ7Cy
+JjSgPVJKDxtw2o55pRS4AZNbpoc=
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJzt1zEOgjAUxvFGF0ev4BWcXB1dMR4AQiUuNSkmxq1H681qsYQQas2bXpv4
+/RIIMP1DHwR2zb26roQQ/cbvqvp51Lp+nbf+5KL6W6dke1IP2Ul9aNb+4n7c
+hmMHAPD3rLXiwxiTu2U0JQW5cwaLpEKqRCR3kfNTVFrV16S8VamkLM9gHBMy
+puv8VakkN5t5/0hm7FncFs6hit9FqTXirKIPM2fVfOF+jzFnFR2q6FBFhyo6
+VNGhig5VdGVWha+Lcn6cAQAAAHi8AfTjp4s=
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJzt2DEOgjAUgOFGlzc6MuoNiJOroyvGhBUiggsSMDGegCMwcgRGjsQRGGvF
+Sjt2ey/kfQlGmf6U5pW4ix/BbSWEqEB9BNHrWJbR+7xRPy55dU/z5HrKn0ma
+lId4rW7u9fX9Lhljy9L3/XbSti12i+F5npgAAHaLphZK/GVZhp2jzQtFZz43
+TUN5ocIwxG7R7B01jiN2jkZwRykEd5S0qrBDjGEYCFYVRfFL8n0fu8WYt3rX
+ddgtBsHHJ0lW2QcNdotB8KCR1uOjc9DwpHLHk8odV7kjWMVjwR2PBXdc5Yhf
+q9wRfK2SJDeVAgAEq+q6FsT+VWCMLdsHppnX3w==
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztmLFugzAURa128cjISH+hU0e60TVVJdZEpaELlUilqBMjn8DIZ/BpjNTU
+iLwaQ1yp8vXgIyUizuAj7uPpmbvDx+7thjF24uJrtz8/luX+6zkQP16K0/ux
+yF6fis/smJUPh1uxeD99xuvB41mhaZo4juu6RotMdF0XRRH7gXOO1pkIw5AR
+0DojIjj2G7TRmF0QBE5ZaZXgVrSc8jx3waptW6okVuBWSoXLRbiVkp3iCVGi
+An3fK55pmkKstAJLT5tUVaUVAMZHs1OSAlrN2SVJoiQFtNooHpQVrajlvxAr
+qrR89iHNim66rKgB1Kw2ilxiv1lpO/malR2lwSwdy1ZrnRxotdHJgVZXi9y+
+lZjJzZ8sa1bzqdNkL2tW4mAuN5Kj5gbwKVQLfArVYr+xm+BgfIO3+gveyhxv
+ZY63MsdBKzrwoF0u0BdZaJcLs9LVgccmDt4oAefcQSs5sjoV3z/yDaa2e+s=
+
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztlrEKwjAQhg9dHH0FX8HJ1dG14gO0NBaXCKkgbnm0vJmmKBJSG9LlcsL/
+QUvaZvj470pu01yr84KI+pW/VfV9b0z9OK79w0n3l06r9qBvqlNm1yz9y+3n
+GtZPAAAAQCTWWprAf+I0cc5NmURwWmUqcVqNSzauFLNVqJRoG2arzE4uZZXY
+E+Ypx+q7x/+qPFbvHBLl4w8qh8zG40RgUKESW0elCc8gIbWLjsXSOgORUvGg
+xpMDlH4iUClzcmCG5sCmPcuKSsx+crICAAAAAAD/zgtxDkc6
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJzt2L0OgjAQwPFGF0ZGR30FJ1dHV4yJK0REF0zAxPgEPIKjj+GjOSpeHUgu
+11QteNr7Jxo/qvxClUBHyS5a95RSZVDfRfFhWhTxcR7WTxZ5uc3ydDXL92mW
+FpOkX784ft4ej2+S9COdoSGkiPS7eqSoOKgukFmCC6D2bDxVA8jeg20+qPTc
+4W0toSvUHF9BeLwPKuoXbv6Unyo8IxtIVK4SlX3cVNTxTVRNifmMwmeV/RmX
+zfHtX1XaE0IcPDxVNp4u9w9PldnT/f4R1atRV17f8vBUnSA+Hs4qPHf6+rQ5
+pvu1I54qaivv5WolhKdKf48rlav/CE8VtfKDo9aO2khUkvRJd3LFYU8=
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztmDELgkAUx6UWR0dH+wpNrW22GoGrkmWLgQXR5OhHcPRj+NEc7UV1PSjO
+o+zdg+4HhR0H9+P+r8edk3gfbEaWZR1s+Aqi0zzPo/PSgR+r7LDbZsl6kR2T
+bZLP4jEMTu+f63NnMBgMf0Nd157nWQ/gGUboNZqmwRqv2LZNLAbLOY4jURJi
+ZEpFUbx1CMOwbVuYUJalGKRRqqoKm6Rp+nYapRXUkgjO9/3bzmi3cl1XLCdR
+IrbqDU6v1YAzyayg/Bha4fKjtJI3bfXyGwTo1bflJE2bOL5OrWkTx4fFJNEQ
+x6cCfXwqaImvF4bx4eOEbpcnIj44aOl2uYPrXH6coIRhneON4lPnDDeqMw1B
+DXy/4NMQ1O8XZDD86+Hs+FQUzo7PRjFUYp7dsHzzLk7cdH7Bx6+88E1ncJhU
+qcFgAC4NXvpw
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztmL1ugzAUhVG7MDIy0jdAnbp2o2uqSowkKg1dKCKRqk6MPAIjj8DII/EI
+jOmtqIwFKbFjY1+pPlKi/Nqfz7m5Se7d7mPzdmNZ1sGGq8328zHPt1/PDtx5
+SQ/v+zR+fUqP8T7OH3a38OD97+Xn9sno36htW8/zrL8Fz9Z1rQYGNlqGUUx4
+0RwWtqqq5FK5rjvfKEmSsy8uy1KBb2AUWTYMw77v2d87J7RtW4pptFHXrQAH
+iaJIrmkXI2PUxDcwTQqVyCKDJqYhoRoELg0Lgnt4qLIsEw+RHE0WFeQoftKh
+SgVLfSLp/osL+hVCKtIAoSfrZhlFjOL6mlhbCOMzRcWorusQFhXp6r7v62YZ
+ReJrmkY3yyiEdX5CSWV6AqNoo/D0BIRG0f/dEBqFp87pipL7g/ZqQXaO42Cr
+KDo7JBVlsmMUwuyKosCWHY2EJDsaKQgC7dlNZqfakeazZZVIjJNk3tnpqjAs
+n7iFpXgnpWfH2muIa8hGpmpri6uzLUz1FexuxK5vO0DtPw==
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJzt1jEKwjAUxvGHLo5ewSs4uTq6VjxAi2lxiZAK4paj5WYaiaQx0VIQeW/4
+ftDSdvrzEkJXzblqZ0TUL/ytqq9bY+rbfulfDro/dVodd/qiOmU2zdx/XL+u
+5/MdAAAA4G+stZTwr9xFeZKQsDIpYExKB5VFMlaVSyaqauQLqoKwr+LyldtM
+gpjknONuGQgclPDlYz/YI+GDkrPPMaiJMKiJBA4qTZJzRtEXvIUf/9glhI3k
+cUe9yf64AAAA4EcPu93eGA==
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztmLFug0AMhlG7MDIyklfIxJqxa6pKjCQqCV2oRCpVeQIegZHH4NEYE0ep
+HIsDekNre/AnJQrIEp/+u8sdXu0/t4enIAhOIXxtd9+but6dXyO4eKtOH8eq
+eH+pvopjUaf7Z7i5/vncfl8Mw1ik7/skSQICXHZdp8cHCcOwbVsRpSiKJpUE
+Q4vjmAqUZXm/3zTNKDQ2JRgd1wcZhiHPcyxgiwuDyrJsrgZSYo4Lc4BY5mro
+UDJb/UmZWdEyngmPM9mzjGfC32ey+58wWcY5iJ6YlT8KrWAHV2hFd3Bplweo
+9Otq5URhUPS0I+3ywOe0wwxdfQunHWYUrj4alJ7VZ0F5YkF5oiEoOI3P9Rmk
+gqIbiouI0sXpM1Dg3UGqU4QOC3r8PZlJjTRNZfXwXW80w0edIlfvX7tt9OmT
+K25ZT3y4/fU4W3DIqNvmomc7MAxDOVes1Q0/
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztmL1ug0AMgFG7MDIy0lfI1LUbXVNVYiRRaehCEYlUdWLkERh5DB6Nkbgi
+uvggoHA/nKXySYkShMwn+3T4/LT/3n4+WJZ1tOFru/t5ybLd75sDf96T49ch
+iT5ek1N0iLLn/SNc3Fw+f7/bFZ3Ude15nsUDV8qyNK4xxgJ6s3x6blVVaVJy
+HGfsuXEcszubpgnDsHeDbdvKkzZUwhpjDPXyPFdo5bruLB9MURQ6qgmZF1bq
+gKT5vo+rKS/GEhUEgXCQXjXlxSBCFwoiy8Rp+WpCWPlQYrWbFlO7+CVJ05SJ
+gaRpnQt48UvWUS0gxtJl2oWDuJWmV6QYbMMhtbTwFmHahWO1uhPojgha4e7I
+tMsVye5IB7hnM+1yRUnPphacKPmeTRUEEwWdHrVE4drRSRSrHXR9RBJFsHZY
+iUjt8HIiUjs8o6CgNJwsmVW6Oeky9RaGc8HY2G1hpQmTxXxmDSHp+MBetMyS
+JjikbfkGWwa1U252yNWBcD7xIff+ZdMb0k5g8ER/cwjfQeeMs/KvOAPfHRMB
+
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJzt1zEOgjAUxvFGF0ev4BWcXB1dMR4AYiEuNSkmxq1H6820BoIvRMhzsO8N
+3y+BANM/j0JgU12LemGMaVdpV5T3vffl47hOJyfXXhpnzwd3s431u2qZLm77
+7X38BAAAAMgihGCIdCpVEmM006SqZpL0VHV3TbyqW0ujJSRe9RWq+FDFRN+l
+0i0fQ1J6wUq39DAoJgyKSeGgaJKSQdEkwS89Ckkc2pL0/DVMJc3LFsxPytn2
+06wG/65i0vYsAACAHi8wonZH
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztmL1ugzAQgFG7MDIyklfI1DVjV6pKjIBCoQuVSKWqT8AjMPIYPBojuQTk
+XF0wJvKfWn9SoiQ4+MvdxbZul36Ebw+O45xceAqTr0NVJd8vHrx5LU/veZkd
+n8vPLM+qp/QRPtxPj8vrwfLP6LouCAJnGbjatq1KJZjO8zyG0ojruk3TKPBZ
+DdFv6rqWbeX7Pp6xKIrZYWCCIyZVCdJB5oqiqO97xmC4SgZLLTASKFDiGQ9R
+UhAu8tvZUSLgPCqwkvqVv2FF6sQoq7FOllYDXVZ3YK34sVac4B1Kt8uNrTuU
+GrbuUAqAk5hp6QMlfFjVrTOBD4eb9gJ54NwZojT8DJRulwkDA2WLnBObOx4o
+JRMCZZU4Me1PRzVnDFHCiYNDHbuDBJcUNLJw4vwrSz6Um7zmDF4t70CGG5U7
+itnqguNxHMd4mPDO5FKyVqsdd42EB400QPh9GG5wNyFi+LarTchZqISKEhOC
+ynbuJoiYCSuwxaKdMxRhwaY=
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztmb9ugzAQxlG7MDIy0lfI1LUbXVNVYiRRaehCEYlUdWLkERh5DB6NMbmK
+yLUOtzHGxjf4kxIl/Ln8/Pk4Dudh/7l9v/M87+jD23b39VRVu++XAL68FseP
+Q5G9PRen7JBVj/t72Li5vn4+n530qe/7KIq8vwV727YlArM+GyAFQSCPtA5b
+GIbo5/I8Fx45DEOapkK8ruv0Ut2EkWTT6B4EYTFnnWiUjU1fkiRqEZqmEbLV
+da1MxYLA2JWDjJq6pwzm+77C9P3PFsfxQrDRf8k8XxPMhBAYjN020VU8GOSJ
+bZxfARjLWzp2gcqypGmXWpU2LUclL0clL4JUyp2SUS3vlPQKemb+CWV5p7Rc
+/MQRMQpc4h+aAMm6Ucgl6zzniUt6m0k1Qc9JzSWERM0l6D+tu4SKEgUkdLlR
+QCJYlNzldlMEcxtZZB0JWUQht51Fc3nsWiRceF9oEYupttSMyjXimftPgVCz
+1kCmU2ZIMiVXy/A18oxSQFrh/sIvlVsvjNR0Ac45t+Q=
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztlrEOgjAQhhtdGH0FX8HJ1dEV4wNArISlJsXEuPXR+mZYgkNNaa1L7xL/
+L4FAGfhyd/1h297q60oIMVTuVDePg9bN87RxN2c19J2Sl6O6y07qfbt2i7v3
+MV2PAAAAQBxjjAhwi3xkfBgqkVgl+sXB6qdH/2k1z9XiRiO0SgCrr4RZQetj
+rY1FFlXCj0F2MalYOueprBbh0MQQnuXy20rt8gGs5nTKmeGSVvnvIrFKl6vw
+tPtbPibmK7mOF7DK+WMnCat8sfLBnnZj9aEBAAAAACjAC9qkLQY=
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJzt2DEOgjAUgOFGF0YHEx31Ck6OOrpiPABERJdqwMR4Ao/g6DE8mqPiew4k
+Dc2LBazt+xIJGtL8BFIq43gfbjpCiDwoNmF0mmdZdF72ii8rme9SmawX8pik
+STaNu8WPk8/nvf9kBu5gBAagD4QCj7kBP6uGQG2ga6KWq+gCYFKFcBy3qy4A
+R94C/TF6blfR4f2M9zZXled5yvUqq7r6rlZ914NzQnPPRzur6DNAm21c1Wb5
+r9rsrKIU1rt+cKNK38ZVVbiKzocqXFPNwBVw1X9VqSs9nH/oI+B5+VB1AOqY
+5tyreoC63oEg839hdlYhkxV7Ez02VzHGGKN4AZkusOI=
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztmL9ugzAQh1G7MDIy0lfo1LVj11SVGElUGrpQiVSq8gQ8AiOPwaMx0qNE
+p6v5Y7utz67kT0qUxBB/OQvzu9wc3nYvV0EQnEJ42u0/7qtqf36M4M1TeXo9
+lvnzQ/meH/Pq7nANH95eHuPrwePxyOi6LkmSYAUYatuWXymKojUlW25xHEuV
+JsIwZLPCSYuimI/WdU3F2MqFM24cA1ViLhfOuHEMrRiP1TTj4vJRmK1UaJrG
+QSu8TtM0te1yATY0LFTf97Z1RoQ91rbOiKAkvSK8klfySr8B8oBTSvMsal1p
+2Ax+VuLxBIaZRWAU7s78VkLgdK1oAoItFM0RMQgJWZY5KDZ8LxpnpyOFP7or
+glbuLOJgo/9SwfQiwhIkX+iuhTkr2kbproU5K3rX07oL02bnz63wm3XbKPpz
+zFlpnUULZSLn/GDbYegK6bajElF4YrOQBNb2h8U/S41mVJVANYchNgsRxQUl
+RFo0F9oKj+e/8AkxadX4
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztmLFugzAQhlG7MDIykjdAmbp2o2uqSowkKg1dKCKRqk6MPAIjj8DIIzEy
+MqZ/lShFNUUYhfMN/iSiEAnyyT7fnb3afWze7gzDOJj42Gw/H9N0+/Vs4eYl
+Przv4/D1KT6G+zB92N3jx/Xl+vl+0tyOuq4dxzEkwSNlWS5nZdu2rFLfrSiK
+JaxM05xtdSbLsptb5XmON0dRJPsIzaDJ0nWd53kM3SAWBAHBhM5AdGMidhIm
+FLGn2uhCXwxLW7XOL1VVXYeL+K8nlgMmGn2kEiCBz6JKbdtigVuWpWQ0BkGK
+Fn3oNfpgiFj5oGXqR9HSTZSsD0A+RFZUIjNxiRE3A/N64yRJmqZZzkrs3+ZB
+H4GDTZSI2nKM+uu67qCYQiuR636ET08FEPwcJvEPCDyek8jQCqmYlZVYGhTK
+iEXzjJLWYrxo0ivx8Rk38X2fps+Z2NVw27wQzNTEIz7iGP7viE/txmHGEZ9G
+o9FoNCN8A80L6kI=
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJzt1TEKwjAUxvGgi6NX8ApOro6uFQ/Q0lpcIqSCuOVouZmmVGLwSRAEvzd8
+P2ix7fIn9aWr5lwdZ8aYYRFPVX3dOlff9st4cbDDqbddu7OXru/cppnHm+vn
+Mf6+ExER0Q9CCOYT7722JGxbOWkCrHpbk3ipsCp/9P+qwpoAq1KYqjcoyalE
+F400zKCUvzs9VYnyKuCnR9I2hgmrvpRvXOiWF/jmMC1LPmv5Xx01g3I/hycV
+qrA7lfzKwJOIiIiISL8HXDXCcA==
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztmLFugzAQhlG7MDIyklfI1LUb3VCqSqyJSkMXikikqhMjj8DIY/BojPQq
+V+7FlGBcHb5K/FKixLLIl/vtu7M3h7fdy43jOCcX3nb79/ui2H88evDlKTu9
+HrPk+SE7J8ekuDvcwuD2+/X1uV+1iqXatg2CwJkSzKmqyiLAFVFQ/REpiiIK
+KrBg7BfTNFUmQ2A9z5MT4jjuuo6CSlNDo4fMyyPhEHFAapqGG1JZlqx4QHVd
+c0MC+b4veMIwtLvXpLB3DJEgKdnGUfMSB++UvGQdaZi6OVQTJU8KASekUFZI
+Qq7rWgGb7GSsgOFOBmdvPG4rYr9KAbON8yMMxidcIIgS83DZZrkQTyppItHp
+z0x5ni+ztETh06wpUBAXMBEfEDT/PjWVWTdOvbRkN66P1NMvLYk0q32iXlpm
+D4fdwZAK+05KNavaGizFWTKottT29ZfVVnObU9snhLf5pI84UKRXDbDNsY9j
+YDCudPV0SEJXLh7HtMydzCywJa+JJsGsn6BXrfqP+gSNr3t6
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJzt2b1ugzAQB3DULIyMjPQVOnXNRtZEkTySqCR0oRKpFGVi5BEYeQwejbG9
+yJXrxPk4N8V3g/8SUSBS+IGNuIPn9cd88xQEwS6Ej/lqP62q1WERwcqy3L1v
+y/xtVn7m27x6XU9g48vPcvz+9XC6rkuSJDACG9u2ffz/bdP3/UWPyQO5MxWG
+JBOGoTNY0zRyp0KIYRj0n2A1yzIq2N0ouYRRc36jw6gtJ/EqfLwKH4YquAVw
+UwEpiiI+KvMuWRQFOUk/RZ500cNn1K4VWo5JmHrP/Vm6TYKKhaQ21osTZFyW
+8bY8qhbDrI3NwLG4h5k5o7IqlcGmYNSWkygVn34HAmPHcBB9v2MVr8LHq/Bh
+qGLYhUHiOOamqutakchbHhkoqxRJCEHNOUbvxdI0PXtcSU6CcCBBxaKT/n06
+yW4L//DcfDswxgzXd3HDdu1VxUgX3R+6LXXFjTqXbGFje6xsLjE+Pvh8Axh7
+og4=
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztlrEKwjAQhoMujr6Cr+Dk6uha8QFajMUlQiqIWx6tb6YpUQlpetblrsL/
+QculGfIRcn+6qi7FaaaUahb+VZS3rbXlfb/0g4NpzrXRx5256lrbTTX3H9ev
+p6sfAAAAwP/gnFNvfD0Rkz4ibrRSgN9qaHNiW0Grn6ZgBSuacKqz7S9oldC2
+7RSSISGbV7IhP2Ql7kZHvZRVH9mQJ4DVeDitPtFEN1ecYAxWI5uLuQe//gwn
+Oc+WV0k6xesSU/xiWURSPXsjyyoFsjsmfikDAAAAAMjyBPgLPYA=
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztmLFugzAQQFG7MDIy0j9AnTrSja6pKjGSqDR0oRapVHVi5BMY+QRGPolP
+YKSXBiFjo5AamrvBT0oEkUAvd8f58N3uY/N2YxjGwYSvzfbrMU23388WnLwk
+h/d9Er0+JZ/RPkofdrfw433/OR53Go1mTF3XjuMYv8BBURTYRkds2zbmAFvG
+WNM0V7OaVVIG/ktZlgut2rYNw5CI23D5mWurqnJdV1nMNE21iK0IPD6WZfFW
+cRyTUkL3AaAGqClBoyOVtY5elPil4QR0GFwlIUQUopRlGe8TBAFulOSsoYeo
+Gy/ovu9TKCQ+SuhZ66YKCdenk5okepSErKEXkvysoTdJuUPidgA5ROhVBAhK
+nufh+pzI85y3gvmWyOtYJ7lBs8I26hHE4BTbqAeKHBrUkErl97vVATHwISjG
+p1IX/yUIYku2EdaFL35SZSZsklDYQxjgs4ntMkJbXYIw6ijfZ8kdhAlZ5gpW
+sw4CS6ZTwWpyIP8ry6flYXlV458mZMYYuoPM5K41hS0LzRl+ABSq9dA=
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}], ",", 
+     GraphicsBox[
+      TagBox[RasterBox[CompressedData["
+1:eJztmL9ugzAQh612YWRkJG+AOnWkG11TVWIkUWnoQhGJVGVi5BEYeQRGHolH
+YEwvInId80eXCGyr8iclSlBCPs7Id7+stt/rzwdCyN6Ap/Xm5yVNN8c3E968
+x/uvXRx+vMaHcBemz9tHOPh0eZxfn/4RZVnatk2GgONFUYiUqet6TGbMMEmS
+pmkWtbIsC680KAlFnt3KMAz6E77vt23LfQCOBEEwIQZnmH198zyHM0dRhPx8
+VVWO4/Td4Dzzit1Nd0W0YrJ1/oD1pWKyXa7QVni0FR5thQR2ddWsoAOapkm7
+lWydM1mWsR2n30AF05/E8G10aZMOz/OEVQk5Cg5OPuI1hPl0qFCZPuykNIH4
+WHFCDMOs3hLjOp6JMkopHcdYJRWZ2Lnq6YkdA82SiixiB0R7vYh4FLeSu6ly
+0BteqVuL3btku1yhrfAoaMUmHdkuF9iIOm8ehInddd07xiT4Io2osycdOrHf
+1GHZ1EwWiKhsh0Xuz1xqXiKiwmWyf25PD+QiUzMy4HAISM23ionMhhg38VlV
+owi/6kNHFQ==
+        "], {{0, 50}, {50, 0}}, {0, 255},
+        ColorFunction->RGBColor],
+       BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+       Selectable->False],
+      DefaultBaseStyle->"ImageGraphics",
+      ImageSizeRaw->{50, 50},
+      PlotRange->{{0, 50}, {0, 50}}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.8715291452562246`*^9, 3.871529174083638*^9}, 
+   3.87152947175184*^9, {3.8715295093115635`*^9, 
+   3.871529534606569*^9}},ExpressionUUID->"30c97fe1-142a-49b6-9652-\
+2591c0f5c301"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"trainingSet", " ", "=", " ", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", 
+    RowBox[{"i", "\[LessEqual]", "3"}], ",", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", "\t", 
+    RowBox[{
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"j", "=", "1"}], ",", 
+       RowBox[{"j", "\[LessEqual]", " ", 
+        RowBox[{"Length", "[", 
+         RowBox[{"digitsLearn", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], "]"}]}], ",", " ", 
+       RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", "\t\t", 
+       RowBox[{
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"trainingSet", ",", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"digitsLearn", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", 
+            RowBox[{"[", "j", "]"}], "]"}], "\[Rule]", "i"}]}], "]"}], 
+        ";"}]}], "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]",
+    "]"}], ";"}], "\[IndentingNewLine]", "trainingSet"}], "Input",
+ CellChangeTimes->{{3.8715295511678915`*^9, 3.8715296988662987`*^9}, {
+  3.8715297325825624`*^9, 3.8715297702067127`*^9}, {3.8715298013622093`*^9, 
+  3.871529857842451*^9}},ExpressionUUID->"b669c0a4-23d9-4220-9f7a-\
+53123235a974"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJzt2DEKwjAUxvGHLh29gldwcu3oWvEALcbiEiEVxC1Hy800JYppo/gG6Yvw
+/aGlzfSDpE3psjlVhxkRdYU/VfWlNKa+bhf+Zqe7Y6vVfqPPqlVm3cz94Opx
+9Nc3hND/55zzj7O1VhoyiJ5JQwZBxcwvpwxVFCVteZWhKp6+TFQjUg6qlCSu
+ekuSVY1I4m+G1BPGp1eFnTct3ounV30liag+zZqsihNU/KDiBxU/qPhBxQ8q
+flDxC187uf2TQQghhNAPuwMXxKg/
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "1"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJzt2L0KwjAUhuGgS8eOjnoLTq6OrhXBtcVYXSKkgngFvQwvw0tz1HjicJbA
+51Cq9HugpT9DXjh0SGfVqdiPjDFNFk5FeVl6X17XebjZuOZYO7tbubOtrV9U
+4/Bw/jne10+iXt3FVLkJVv1L1UQYJROs0uLsTAKrdE8uWJUqid9+qiTaimFW
+IfPSHmKYVcjUtK57WPWtVuh1DyK+ZRWOVThW4ViFYxWOVThW4ViFYxWOVbjf
+rIr/0FiF0DsgvffpF6uIuvACCehW/A==
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "1"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJzt2LEOgjAQgOFGl46OjPgKTo644YoxYYWI1AUJmBgnRh6BR+HRGLVYLGAT
+c5PX4f4EAkxfrgvtOr4G5wVjrOTyFkT3XVFEj8NKvhyz8pJmyWmf3ZI0Kbbx
+Un7cDFf//KT+XtM0nufVdY0NGZMk9o5zjm0ZcxyHfcK2DOlBWaWaDsoSVdu2
+bB62qO9rUDaozEHZoDIHha6qqkpLhBDoKrlwrutqRhiG8iO6arpwvu93XYer
+MqekSLgqc+F0iCr5S2BOCV31I1LBIxU8UsEjFTxSwSMVPFLBIxU8UsGzU8U5
+VyqrjvvyPFcqq4775JZHjwvbMkvty4QQ2BCKoijKxl73o2u1
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "1"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztmLFugzAQQK12YWRkpH+AMnXtRtdUlVgTlYYsVCKVok6MfAKfwcgn8QmM
+9FKiy5W0rqu03A33JBDYCJ58p8P2zfpl+XxljNl5cFqu9ndFsXp78OHmMd9t
+N3n6dJ+/ppu0uF1fQ+PieByuh8soy9J84Hneha/6K+q6NgRunSNBEEizwtjJ
+sTpXYrei6RTHsRArTCdQ6vteghWNHShBC7sVjV2SJGMjr1XXdVAqaezYrdq2
+DcNw/HoURajEa0ULZtM0tIvLalIKJr1cVjhQmOHsVpBRk1IgwYpm1JcPzG9F
+MyrLMglWEDvf9y0ZxWKFBeq7jGKxqqrKHjsWK0fUyh21cket3FErd9TKHbVy
+R6AVnT9zu5z4cf7MAirZ52AzI3CgBrVyhq7LuF1O2Ff6XOBAWdZl8yMwfINa
+/Qa1cge3lLlFPjFuj4j6L/8r74ntuD8=
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "1"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJzt2D8KwjAUx/GHLo5ewSs4uTq6VjxAi7G4RGgFccvRcjNNiX9eWi1xeg/5
+faGl7fQhIU3pojoVhwkRtbNwKsrLumnK63Yebna2PdbW7Df2bGrTrKppeLh8
+HN31DSH0e977sHycc9KQJHomDUlSqAoTp1BFLGnLO4UqPn16VJQmzenqDZQS
+FQ2SFn0YKA2qlyRuNxpUvTenEhUfKCWq4RYjruKkOFDiKk7iX1NSKr7QaPCB
+J6Uafy9Jqb7NnaxqPKjygyo/qPKDKj+o8ov7kbZ/MgghhBD64+4YQZiU
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "1"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJzt0jEKAjEQheGgzZSWab2ClWUsbVc8wC7GjU2ErCCeIMfIMXI8jaBIutdl
+wffBhGSqv8h6uHbnhVJqknJ0/X0XQv84rMrj6KfL6O1p7292tGE7LMty85n3
+/Un/LedsjEkptQ6paK3L5xSR1iEV9dU6pMIqHKtwrMKxCscqHKtwrMKxCscq
+HKtwrMKxCscqHKtwrMKxCjfPKhGZYVWMsSQ551qHEBHRzwubyPBp
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "1"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztlzFuhDAQRa2kcUlJmVwhVdp0pN0oEu2ulixpiMRGilJRcgRKjsHRKNkh
+IGuCwHaDvws/CQSG4mn4M8KPp6/Dx50Q4irpdDj+vJTl8fctopv34vp5KbLz
+a/GdXbLy+XRPi0/zMV4PASd0XffwR9u2aJcZUoqiMSSElBKtMxPHsWCgdUaq
+qhL/QRutKGGtpngrkyRJfLDiWSKlvu/hVk3TKIc0TUmJFuFWqlCkpBaxVpQo
+JTBVCW7FB+ZCAGjFQ57nuSdWW0r8szpW4q23eMRr6NhqtfUmtmq4N7xQvPUW
+Vi6VBm2hUFZbMwprZQwzxMoYZvdWxlmkmRj7wf+jVl/QN8JO1HVt+flWGwEF
+alhpgITKCCRURkKo7AlWloQGtCc0oD3ByhLgHlADcA+oQSk53gPq8bBQQ7Cy
+JjSgPVJKDxtw2o55pRS4AZNbpoc=
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "1"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJzt1zEOgjAUxvFGF0ev4BWcXB1dMR4AQiUuNSkmxq1H681qsYQQas2bXpv4
+/RIIMP1DHwR2zb26roQQ/cbvqvp51Lp+nbf+5KL6W6dke1IP2Ul9aNb+4n7c
+hmMHAPD3rLXiwxiTu2U0JQW5cwaLpEKqRCR3kfNTVFrV16S8VamkLM9gHBMy
+puv8VakkN5t5/0hm7FncFs6hit9FqTXirKIPM2fVfOF+jzFnFR2q6FBFhyo6
+VNGhig5VdGVWha+Lcn6cAQAAAHi8AfTjp4s=
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "1"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJzt2DEOgjAUgOFGlzc6MuoNiJOroyvGhBUiggsSMDGegCMwcgRGjsQRGGvF
+Sjt2ey/kfQlGmf6U5pW4ix/BbSWEqEB9BNHrWJbR+7xRPy55dU/z5HrKn0ma
+lId4rW7u9fX9Lhljy9L3/XbSti12i+F5npgAAHaLphZK/GVZhp2jzQtFZz43
+TUN5ocIwxG7R7B01jiN2jkZwRykEd5S0qrBDjGEYCFYVRfFL8n0fu8WYt3rX
+ddgtBsHHJ0lW2QcNdotB8KCR1uOjc9DwpHLHk8odV7kjWMVjwR2PBXdc5Yhf
+q9wRfK2SJDeVAgAEq+q6FsT+VWCMLdsHppnX3w==
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "1"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztmLFugzAURa128cjISH+hU0e60TVVJdZEpaELlUilqBMjn8DIZ/BpjNTU
+iLwaQ1yp8vXgIyUizuAj7uPpmbvDx+7thjF24uJrtz8/luX+6zkQP16K0/ux
+yF6fis/smJUPh1uxeD99xuvB41mhaZo4juu6RotMdF0XRRH7gXOO1pkIw5AR
+0DojIjj2G7TRmF0QBE5ZaZXgVrSc8jx3waptW6okVuBWSoXLRbiVkp3iCVGi
+An3fK55pmkKstAJLT5tUVaUVAMZHs1OSAlrN2SVJoiQFtNooHpQVrajlvxAr
+qrR89iHNim66rKgB1Kw2ilxiv1lpO/malR2lwSwdy1ZrnRxotdHJgVZXi9y+
+lZjJzZ8sa1bzqdNkL2tW4mAuN5Kj5gbwKVQLfArVYr+xm+BgfIO3+gveyhxv
+ZY63MsdBKzrwoF0u0BdZaJcLs9LVgccmDt4oAefcQSs5sjoV3z/yDaa2e+s=
+
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "1"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztlrEKwjAQhg9dHH0FX8HJ1dG14gO0NBaXCKkgbnm0vJmmKBJSG9LlcsL/
+QUvaZvj470pu01yr84KI+pW/VfV9b0z9OK79w0n3l06r9qBvqlNm1yz9y+3n
+GtZPAAAAQCTWWprAf+I0cc5NmURwWmUqcVqNSzauFLNVqJRoG2arzE4uZZXY
+E+Ypx+q7x/+qPFbvHBLl4w8qh8zG40RgUKESW0elCc8gIbWLjsXSOgORUvGg
+xpMDlH4iUClzcmCG5sCmPcuKSsx+crICAAAAAAD/zgtxDkc6
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "2"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJzt2L0OgjAQwPFGF0ZGR30FJ1dHV4yJK0REF0zAxPgEPIKjj+GjOSpeHUgu
+11QteNr7Jxo/qvxClUBHyS5a95RSZVDfRfFhWhTxcR7WTxZ5uc3ydDXL92mW
+FpOkX784ft4ej2+S9COdoSGkiPS7eqSoOKgukFmCC6D2bDxVA8jeg20+qPTc
+4W0toSvUHF9BeLwPKuoXbv6Unyo8IxtIVK4SlX3cVNTxTVRNifmMwmeV/RmX
+zfHtX1XaE0IcPDxVNp4u9w9PldnT/f4R1atRV17f8vBUnSA+Hs4qPHf6+rQ5
+pvu1I54qaivv5WolhKdKf48rlav/CE8VtfKDo9aO2khUkvRJd3LFYU8=
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "2"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztmDELgkAUx6UWR0dH+wpNrW22GoGrkmWLgQXR5OhHcPRj+NEc7UV1PSjO
+o+zdg+4HhR0H9+P+r8edk3gfbEaWZR1s+Aqi0zzPo/PSgR+r7LDbZsl6kR2T
+bZLP4jEMTu+f63NnMBgMf0Nd157nWQ/gGUboNZqmwRqv2LZNLAbLOY4jURJi
+ZEpFUbx1CMOwbVuYUJalGKRRqqoKm6Rp+nYapRXUkgjO9/3bzmi3cl1XLCdR
+IrbqDU6v1YAzyayg/Bha4fKjtJI3bfXyGwTo1bflJE2bOL5OrWkTx4fFJNEQ
+x6cCfXwqaImvF4bx4eOEbpcnIj44aOl2uYPrXH6coIRhneON4lPnDDeqMw1B
+DXy/4NMQ1O8XZDD86+Hs+FQUzo7PRjFUYp7dsHzzLk7cdH7Bx6+88E1ncJhU
+qcFgAC4NXvpw
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "2"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztmL1ugzAUhVG7MDIy0jdAnbp2o2uqSowkKg1dKCKRqk6MPAIjj8DII/EI
+jOmtqIwFKbFjY1+pPlKi/Nqfz7m5Se7d7mPzdmNZ1sGGq8328zHPt1/PDtx5
+SQ/v+zR+fUqP8T7OH3a38OD97+Xn9sno36htW8/zrL8Fz9Z1rQYGNlqGUUx4
+0RwWtqqq5FK5rjvfKEmSsy8uy1KBb2AUWTYMw77v2d87J7RtW4pptFHXrQAH
+iaJIrmkXI2PUxDcwTQqVyCKDJqYhoRoELg0Lgnt4qLIsEw+RHE0WFeQoftKh
+SgVLfSLp/osL+hVCKtIAoSfrZhlFjOL6mlhbCOMzRcWorusQFhXp6r7v62YZ
+ReJrmkY3yyiEdX5CSWV6AqNoo/D0BIRG0f/dEBqFp87pipL7g/ZqQXaO42Cr
+KDo7JBVlsmMUwuyKosCWHY2EJDsaKQgC7dlNZqfakeazZZVIjJNk3tnpqjAs
+n7iFpXgnpWfH2muIa8hGpmpri6uzLUz1FexuxK5vO0DtPw==
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "2"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJzt1jEKwjAUxvGHLo5ewSs4uTq6VjxAi2lxiZAK4paj5WYaiaQx0VIQeW/4
+ftDSdvrzEkJXzblqZ0TUL/ytqq9bY+rbfulfDro/dVodd/qiOmU2zdx/XL+u
+5/MdAAAA4G+stZTwr9xFeZKQsDIpYExKB5VFMlaVSyaqauQLqoKwr+LyldtM
+gpjknONuGQgclPDlYz/YI+GDkrPPMaiJMKiJBA4qTZJzRtEXvIUf/9glhI3k
+cUe9yf64AAAA4EcPu93eGA==
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "2"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztmLFug0AMhlG7MDIyklfIxJqxa6pKjCQqCV2oRCpVeQIegZHH4NEYE0ep
+HIsDekNre/AnJQrIEp/+u8sdXu0/t4enIAhOIXxtd9+but6dXyO4eKtOH8eq
+eH+pvopjUaf7Z7i5/vncfl8Mw1ik7/skSQICXHZdp8cHCcOwbVsRpSiKJpUE
+Q4vjmAqUZXm/3zTNKDQ2JRgd1wcZhiHPcyxgiwuDyrJsrgZSYo4Lc4BY5mro
+UDJb/UmZWdEyngmPM9mzjGfC32ey+58wWcY5iJ6YlT8KrWAHV2hFd3Bplweo
+9Otq5URhUPS0I+3ywOe0wwxdfQunHWYUrj4alJ7VZ0F5YkF5oiEoOI3P9Rmk
+gqIbiouI0sXpM1Dg3UGqU4QOC3r8PZlJjTRNZfXwXW80w0edIlfvX7tt9OmT
+K25ZT3y4/fU4W3DIqNvmomc7MAxDOVes1Q0/
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "2"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztmL1ug0AMgFG7MDIy0lfI1LUbXVNVYiRRaehCEYlUdWLkERh5DB6Nkbgi
+uvggoHA/nKXySYkShMwn+3T4/LT/3n4+WJZ1tOFru/t5ybLd75sDf96T49ch
+iT5ek1N0iLLn/SNc3Fw+f7/bFZ3Ude15nsUDV8qyNK4xxgJ6s3x6blVVaVJy
+HGfsuXEcszubpgnDsHeDbdvKkzZUwhpjDPXyPFdo5bruLB9MURQ6qgmZF1bq
+gKT5vo+rKS/GEhUEgXCQXjXlxSBCFwoiy8Rp+WpCWPlQYrWbFlO7+CVJ05SJ
+gaRpnQt48UvWUS0gxtJl2oWDuJWmV6QYbMMhtbTwFmHahWO1uhPojgha4e7I
+tMsVye5IB7hnM+1yRUnPphacKPmeTRUEEwWdHrVE4drRSRSrHXR9RBJFsHZY
+iUjt8HIiUjs8o6CgNJwsmVW6Oeky9RaGc8HY2G1hpQmTxXxmDSHp+MBetMyS
+JjikbfkGWwa1U252yNWBcD7xIff+ZdMb0k5g8ER/cwjfQeeMs/KvOAPfHRMB
+
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "2"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJzt1zEOgjAUxvFGF0ev4BWcXB1dMR4AYiEuNSkmxq1H6820BoIvRMhzsO8N
+3y+BANM/j0JgU12LemGMaVdpV5T3vffl47hOJyfXXhpnzwd3s431u2qZLm77
+7X38BAAAAMgihGCIdCpVEmM006SqZpL0VHV3TbyqW0ujJSRe9RWq+FDFRN+l
+0i0fQ1J6wUq39DAoJgyKSeGgaJKSQdEkwS89Ckkc2pL0/DVMJc3LFsxPytn2
+06wG/65i0vYsAACAHi8wonZH
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "2"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztmL1ugzAQgFG7MDIyklfI1DVjV6pKjIBCoQuVSKWqT8AjMPIYPBojuQTk
+XF0wJvKfWn9SoiQ4+MvdxbZul36Ebw+O45xceAqTr0NVJd8vHrx5LU/veZkd
+n8vPLM+qp/QRPtxPj8vrwfLP6LouCAJnGbjatq1KJZjO8zyG0ojruk3TKPBZ
+DdFv6rqWbeX7Pp6xKIrZYWCCIyZVCdJB5oqiqO97xmC4SgZLLTASKFDiGQ9R
+UhAu8tvZUSLgPCqwkvqVv2FF6sQoq7FOllYDXVZ3YK34sVac4B1Kt8uNrTuU
+GrbuUAqAk5hp6QMlfFjVrTOBD4eb9gJ54NwZojT8DJRulwkDA2WLnBObOx4o
+JRMCZZU4Me1PRzVnDFHCiYNDHbuDBJcUNLJw4vwrSz6Um7zmDF4t70CGG5U7
+itnqguNxHMd4mPDO5FKyVqsdd42EB400QPh9GG5wNyFi+LarTchZqISKEhOC
+ynbuJoiYCSuwxaKdMxRhwaY=
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "2"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztmb9ugzAQxlG7MDIy0lfI1LUbXVNVYiRRaehCEYlUdWLkERh5DB6NMbmK
+yLUOtzHGxjf4kxIl/Ln8/Pk4Dudh/7l9v/M87+jD23b39VRVu++XAL68FseP
+Q5G9PRen7JBVj/t72Li5vn4+n530qe/7KIq8vwV727YlArM+GyAFQSCPtA5b
+GIbo5/I8Fx45DEOapkK8ruv0Ut2EkWTT6B4EYTFnnWiUjU1fkiRqEZqmEbLV
+da1MxYLA2JWDjJq6pwzm+77C9P3PFsfxQrDRf8k8XxPMhBAYjN020VU8GOSJ
+bZxfARjLWzp2gcqypGmXWpU2LUclL0clL4JUyp2SUS3vlPQKemb+CWV5p7Rc
+/MQRMQpc4h+aAMm6Ucgl6zzniUt6m0k1Qc9JzSWERM0l6D+tu4SKEgUkdLlR
+QCJYlNzldlMEcxtZZB0JWUQht51Fc3nsWiRceF9oEYupttSMyjXimftPgVCz
+1kCmU2ZIMiVXy/A18oxSQFrh/sIvlVsvjNR0Ac45t+Q=
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "2"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztlrEOgjAQhhtdGH0FX8HJ1dEV4wNArISlJsXEuPXR+mZYgkNNaa1L7xL/
+L4FAGfhyd/1h297q60oIMVTuVDePg9bN87RxN2c19J2Sl6O6y07qfbt2i7v3
+MV2PAAAAQBxjjAhwi3xkfBgqkVgl+sXB6qdH/2k1z9XiRiO0SgCrr4RZQetj
+rY1FFlXCj0F2MalYOueprBbh0MQQnuXy20rt8gGs5nTKmeGSVvnvIrFKl6vw
+tPtbPibmK7mOF7DK+WMnCat8sfLBnnZj9aEBAAAAACjAC9qkLQY=
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "3"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJzt2DEOgjAUgOFGF0YHEx31Ck6OOrpiPABERJdqwMR4Ao/g6DE8mqPiew4k
+Dc2LBazt+xIJGtL8BFIq43gfbjpCiDwoNmF0mmdZdF72ii8rme9SmawX8pik
+STaNu8WPk8/nvf9kBu5gBAagD4QCj7kBP6uGQG2ga6KWq+gCYFKFcBy3qy4A
+R94C/TF6blfR4f2M9zZXled5yvUqq7r6rlZ914NzQnPPRzur6DNAm21c1Wb5
+r9rsrKIU1rt+cKNK38ZVVbiKzocqXFPNwBVw1X9VqSs9nH/oI+B5+VB1AOqY
+5tyreoC63oEg839hdlYhkxV7Ez02VzHGGKN4AZkusOI=
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "3"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztmL9ugzAQh1G7MDIy0lfo1LVj11SVGElUGrpQiVSq8gQ8AiOPwaMx0qNE
+p6v5Y7utz67kT0qUxBB/OQvzu9wc3nYvV0EQnEJ42u0/7qtqf36M4M1TeXo9
+lvnzQ/meH/Pq7nANH95eHuPrwePxyOi6LkmSYAUYatuWXymKojUlW25xHEuV
+JsIwZLPCSYuimI/WdU3F2MqFM24cA1ViLhfOuHEMrRiP1TTj4vJRmK1UaJrG
+QSu8TtM0te1yATY0LFTf97Z1RoQ91rbOiKAkvSK8klfySr8B8oBTSvMsal1p
+2Ax+VuLxBIaZRWAU7s78VkLgdK1oAoItFM0RMQgJWZY5KDZ8LxpnpyOFP7or
+glbuLOJgo/9SwfQiwhIkX+iuhTkr2kbproU5K3rX07oL02bnz63wm3XbKPpz
+zFlpnUULZSLn/GDbYegK6bajElF4YrOQBNb2h8U/S41mVJVANYchNgsRxQUl
+RFo0F9oKj+e/8AkxadX4
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "3"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztmLFugzAQhlG7MDIykjdAmbp2o2uqSowkKg1dKCKRqk6MPAIjj8DIIzEy
+MqZ/lShFNUUYhfMN/iSiEAnyyT7fnb3afWze7gzDOJj42Gw/H9N0+/Vs4eYl
+Przv4/D1KT6G+zB92N3jx/Xl+vl+0tyOuq4dxzEkwSNlWS5nZdu2rFLfrSiK
+JaxM05xtdSbLsptb5XmON0dRJPsIzaDJ0nWd53kM3SAWBAHBhM5AdGMidhIm
+FLGn2uhCXwxLW7XOL1VVXYeL+K8nlgMmGn2kEiCBz6JKbdtigVuWpWQ0BkGK
+Fn3oNfpgiFj5oGXqR9HSTZSsD0A+RFZUIjNxiRE3A/N64yRJmqZZzkrs3+ZB
+H4GDTZSI2nKM+uu67qCYQiuR636ET08FEPwcJvEPCDyek8jQCqmYlZVYGhTK
+iEXzjJLWYrxo0ivx8Rk38X2fps+Z2NVw27wQzNTEIz7iGP7viE/txmHGEZ9G
+o9FoNCN8A80L6kI=
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "3"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJzt1TEKwjAUxvGgi6NX8ApOro6uFQ/Q0lpcIqSCuOVouZmmVGLwSRAEvzd8
+P2ix7fIn9aWr5lwdZ8aYYRFPVX3dOlff9st4cbDDqbddu7OXru/cppnHm+vn
+Mf6+ExER0Q9CCOYT7722JGxbOWkCrHpbk3ipsCp/9P+qwpoAq1KYqjcoyalE
+F400zKCUvzs9VYnyKuCnR9I2hgmrvpRvXOiWF/jmMC1LPmv5Xx01g3I/hycV
+qrA7lfzKwJOIiIiISL8HXDXCcA==
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "3"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztmLFugzAQhlG7MDIyklfI1LUb3VCqSqyJSkMXikikqhMjj8DIY/BojPQq
+V+7FlGBcHb5K/FKixLLIl/vtu7M3h7fdy43jOCcX3nb79/ui2H88evDlKTu9
+HrPk+SE7J8ekuDvcwuD2+/X1uV+1iqXatg2CwJkSzKmqyiLAFVFQ/REpiiIK
+KrBg7BfTNFUmQ2A9z5MT4jjuuo6CSlNDo4fMyyPhEHFAapqGG1JZlqx4QHVd
+c0MC+b4veMIwtLvXpLB3DJEgKdnGUfMSB++UvGQdaZi6OVQTJU8KASekUFZI
+Qq7rWgGb7GSsgOFOBmdvPG4rYr9KAbON8yMMxidcIIgS83DZZrkQTyppItHp
+z0x5ni+ztETh06wpUBAXMBEfEDT/PjWVWTdOvbRkN66P1NMvLYk0q32iXlpm
+D4fdwZAK+05KNavaGizFWTKottT29ZfVVnObU9snhLf5pI84UKRXDbDNsY9j
+YDCudPV0SEJXLh7HtMydzCywJa+JJsGsn6BXrfqP+gSNr3t6
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "3"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJzt2b1ugzAQB3DULIyMjPQVOnXNRtZEkTySqCR0oRKpFGVi5BEYeQwejbG9
+yJXrxPk4N8V3g/8SUSBS+IGNuIPn9cd88xQEwS6Ej/lqP62q1WERwcqy3L1v
+y/xtVn7m27x6XU9g48vPcvz+9XC6rkuSJDACG9u2ffz/bdP3/UWPyQO5MxWG
+JBOGoTNY0zRyp0KIYRj0n2A1yzIq2N0ouYRRc36jw6gtJ/EqfLwKH4YquAVw
+UwEpiiI+KvMuWRQFOUk/RZ500cNn1K4VWo5JmHrP/Vm6TYKKhaQ21osTZFyW
+8bY8qhbDrI3NwLG4h5k5o7IqlcGmYNSWkygVn34HAmPHcBB9v2MVr8LHq/Bh
+qGLYhUHiOOamqutakchbHhkoqxRJCEHNOUbvxdI0PXtcSU6CcCBBxaKT/n06
+yW4L//DcfDswxgzXd3HDdu1VxUgX3R+6LXXFjTqXbGFje6xsLjE+Pvh8Axh7
+og4=
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "3"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztlrEKwjAQhoMujr6Cr+Dk6uha8QFajMUlQiqIWx6tb6YpUQlpetblrsL/
+QculGfIRcn+6qi7FaaaUahb+VZS3rbXlfb/0g4NpzrXRx5256lrbTTX3H9ev
+p6sfAAAAwP/gnFNvfD0Rkz4ibrRSgN9qaHNiW0Grn6ZgBSuacKqz7S9oldC2
+7RSSISGbV7IhP2Ql7kZHvZRVH9mQJ4DVeDitPtFEN1ecYAxWI5uLuQe//gwn
+Oc+WV0k6xesSU/xiWURSPXsjyyoFsjsmfikDAAAAAMjyBPgLPYA=
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "3"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztmLFugzAQQFG7MDIy0j9AnTrSja6pKjGSqDR0oRapVHVi5BMY+QRGPolP
+YKSXBiFjo5AamrvBT0oEkUAvd8f58N3uY/N2YxjGwYSvzfbrMU23388WnLwk
+h/d9Er0+JZ/RPkofdrfw433/OR53Go1mTF3XjuMYv8BBURTYRkds2zbmAFvG
+WNM0V7OaVVIG/ktZlgut2rYNw5CI23D5mWurqnJdV1nMNE21iK0IPD6WZfFW
+cRyTUkL3AaAGqClBoyOVtY5elPil4QR0GFwlIUQUopRlGe8TBAFulOSsoYeo
+Gy/ovu9TKCQ+SuhZ66YKCdenk5okepSErKEXkvysoTdJuUPidgA5ROhVBAhK
+nufh+pzI85y3gvmWyOtYJ7lBs8I26hHE4BTbqAeKHBrUkErl97vVATHwISjG
+p1IX/yUIYku2EdaFL35SZSZsklDYQxjgs4ntMkJbXYIw6ijfZ8kdhAlZ5gpW
+sw4CS6ZTwWpyIP8ry6flYXlV458mZMYYuoPM5K41hS0LzRl+ABSq9dA=
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "3"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJztmL9ugzAQh612YWRkJG+AOnWkG11TVWIkUWnoQhGJVGVi5BEYeQRGHolH
+YEwvInId80eXCGyr8iclSlBCPs7Id7+stt/rzwdCyN6Ap/Xm5yVNN8c3E968
+x/uvXRx+vMaHcBemz9tHOPh0eZxfn/4RZVnatk2GgONFUYiUqet6TGbMMEmS
+pmkWtbIsC680KAlFnt3KMAz6E77vt23LfQCOBEEwIQZnmH198zyHM0dRhPx8
+VVWO4/Td4Dzzit1Nd0W0YrJ1/oD1pWKyXa7QVni0FR5thQR2ddWsoAOapkm7
+lWydM1mWsR2n30AF05/E8G10aZMOz/OEVQk5Cg5OPuI1hPl0qFCZPuykNIH4
+WHFCDMOs3hLjOp6JMkopHcdYJRWZ2Lnq6YkdA82SiixiB0R7vYh4FLeSu6ly
+0BteqVuL3btku1yhrfAoaMUmHdkuF9iIOm8ehInddd07xiT4Io2osycdOrHf
+1GHZ1EwWiKhsh0Xuz1xqXiKiwmWyf25PD+QiUzMy4HAISM23ionMhhg38VlV
+owi/6kNHFQ==
+       "], {{0, 50}, {50, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{50, 50},
+     PlotRange->{{0, 50}, {0, 50}}], "\[Rule]", "3"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.871529825001087*^9, 3.8715298589985805`*^9}, 
+   3.8715306290638227`*^9},ExpressionUUID->"a834dbde-c223-4d01-a76b-\
+01c86b652236"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"digitsLearn", "[", 
+    RowBox[{"[", "1", "]"}], "]"}], "[", 
+   RowBox[{"[", "1", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8715297813480744`*^9, 
+  3.871529789097531*^9}},ExpressionUUID->"bd617d54-2709-49ac-b675-\
+0fe1e83cbbaf"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1:eJzt2DEKwjAUxvGHLh29gldwcu3oWvEALcbiEiEVxC1Hy800JYppo/gG6Yvw
+/aGlzfSDpE3psjlVhxkRdYU/VfWlNKa+bhf+Zqe7Y6vVfqPPqlVm3cz94Opx
+9Nc3hND/55zzj7O1VhoyiJ5JQwZBxcwvpwxVFCVteZWhKp6+TFQjUg6qlCSu
+ekuSVY1I4m+G1BPGp1eFnTct3ounV30liag+zZqsihNU/KDiBxU/qPhBxQ8q
+flDxC187uf2TQQghhNAPuwMXxKg/
+    "], {{0, 50}, {50, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  DefaultBaseStyle->"ImageGraphics",
+  ImageSizeRaw->{50, 50},
+  PlotRange->{{0, 50}, {0, 50}}]], "Output",
+ CellChangeTimes->{3.8715297901130524`*^9, 
+  3.8715306345150375`*^9},ExpressionUUID->"9b5ed92e-5708-45df-b310-\
+0695c52e97b1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Ne", " ", "=", " ", 
+  RowBox[{"Classify", "[", "trainingSet", "]"}]}]], "Input",
+ CellChangeTimes->{{3.8715298724195013`*^9, 3.8715298858091497`*^9}, {
+  3.8715305596984477`*^9, 
+  3.8715305803769474`*^9}},ExpressionUUID->"5c40b004-ea14-41c3-86bf-\
+6d3037292125"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{RowBox[{
+      StyleBox[
+       TagBox["ClassifierFunction", "SummaryHead"], 
+       "NonInterpretableSummary"], 
+      StyleBox["[", "NonInterpretableSummary"], 
+      DynamicModuleBox[{
+       Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+       TemplateBox[{
+         PaneSelectorBox[{False -> GridBox[{{
+               PaneBox[
+                ButtonBox[
+                 DynamicBox[
+                  FEPrivate`FrontEndResource[
+                  "FEBitmaps", "SquarePlusIconMedium"]], 
+                 ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
+                 None, Evaluator -> Automatic, Method -> "Preemptive"], 
+                Alignment -> {Center, Center}, ImageSize -> 
+                Dynamic[{
+                  Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                   AbsoluteCurrentValue[Magnification]}]], 
+               GraphicsBox[{{
+                  PointSize[0.13], 
+                  GrayLevel[0.45], 
+                  
+                  PointBox[{{0.9821769431797024, -0.440194219686987}, {
+                   1.1339776261519132`, 0.8056918676854272}, {
+                   0.5279892326667741, 0.6574306661126254}, {
+                   0.022147046479890797`, 1.4937877187998898`}}], 
+                  GrayLevel[0.7], 
+                  
+                  PointBox[{{-0.9815166384819979, 
+                   0.15045697525228735`}, {-0.5923526886966953, \
+-0.33441771553094035`}, {-0.005656646679640442, -1.462421365651345}, \
+{-1.0734370436522753`, -1.3729645043477454`}}]}, {
+                  GrayLevel[0.55], 
+                  AbsoluteThickness[1.5], 
+                  LineBox[{{-1., 1.5}, {1, -1.6}}]}}, {
+                Axes -> {False, False}, AxesLabel -> {None, None}, 
+                 AxesOrigin -> {0, 0}, BaseStyle -> {FontFamily -> "Arial", 
+                   AbsoluteThickness[1.5]}, DisplayFunction -> Identity, 
+                 Frame -> {{True, True}, {True, True}}, 
+                 FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
+                 Directive[
+                   Thickness[Tiny], 
+                   GrayLevel[0.7]], 
+                 FrameTicks -> {{None, None}, {None, None}}, 
+                 GridLines -> {None, None}, 
+                 LabelStyle -> {FontFamily -> "Arial"}, 
+                 Method -> {"ScalingFunctions" -> None}, 
+                 PlotRange -> {{-1., 1}, {-1.3, 1.1}}, PlotRangeClipping -> 
+                 True, PlotRangePadding -> {{0.7, 0.7}, {0.7, 0.7}}, 
+                 Ticks -> {None, None}}, Axes -> False, AspectRatio -> 1, 
+                ImageSize -> 
+                Dynamic[{
+                  Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                   AbsoluteCurrentValue[Magnification]}], Frame -> True, 
+                FrameTicks -> None, FrameStyle -> Directive[
+                  Opacity[0.5], 
+                  Thickness[Tiny], 
+                  RGBColor[0.368417, 0.506779, 0.709798]], Background -> 
+                GrayLevel[0.94]], 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Input type: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"Image\"", "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Classes: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{",", "\",\"", "1", "2", "3"}, 
+                    "RowWithSeparators"], "SummaryItem"]}]}}, 
+                GridBoxAlignment -> {
+                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                GridBoxSpacings -> {
+                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                BaseStyle -> {
+                 ShowStringCharacters -> False, NumberMarks -> False, 
+                  PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+             GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             BaselinePosition -> {1, 1}], True -> GridBox[{{
+               PaneBox[
+                ButtonBox[
+                 DynamicBox[
+                  FEPrivate`FrontEndResource[
+                  "FEBitmaps", "SquareMinusIconMedium"]], 
+                 ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                 None, Evaluator -> Automatic, Method -> "Preemptive"], 
+                Alignment -> {Center, Center}, ImageSize -> 
+                Dynamic[{
+                  Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                   AbsoluteCurrentValue[Magnification]}]], 
+               GraphicsBox[{{
+                  PointSize[0.13], 
+                  GrayLevel[0.45], 
+                  
+                  PointBox[{{0.9821769431797024, -0.440194219686987}, {
+                   1.1339776261519132`, 0.8056918676854272}, {
+                   0.5279892326667741, 0.6574306661126254}, {
+                   0.022147046479890797`, 1.4937877187998898`}}], 
+                  GrayLevel[0.7], 
+                  
+                  PointBox[{{-0.9815166384819979, 
+                   0.15045697525228735`}, {-0.5923526886966953, \
+-0.33441771553094035`}, {-0.005656646679640442, -1.462421365651345}, \
+{-1.0734370436522753`, -1.3729645043477454`}}]}, {
+                  GrayLevel[0.55], 
+                  AbsoluteThickness[1.5], 
+                  LineBox[{{-1., 1.5}, {1, -1.6}}]}}, {
+                Axes -> {False, False}, AxesLabel -> {None, None}, 
+                 AxesOrigin -> {0, 0}, BaseStyle -> {FontFamily -> "Arial", 
+                   AbsoluteThickness[1.5]}, DisplayFunction -> Identity, 
+                 Frame -> {{True, True}, {True, True}}, 
+                 FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
+                 Directive[
+                   Thickness[Tiny], 
+                   GrayLevel[0.7]], 
+                 FrameTicks -> {{None, None}, {None, None}}, 
+                 GridLines -> {None, None}, 
+                 LabelStyle -> {FontFamily -> "Arial"}, 
+                 Method -> {"ScalingFunctions" -> None}, 
+                 PlotRange -> {{-1., 1}, {-1.3, 1.1}}, PlotRangeClipping -> 
+                 True, PlotRangePadding -> {{0.7, 0.7}, {0.7, 0.7}}, 
+                 Ticks -> {None, None}}, Axes -> False, AspectRatio -> 1, 
+                ImageSize -> 
+                Dynamic[{
+                  Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                   AbsoluteCurrentValue[Magnification]}], Frame -> True, 
+                FrameTicks -> None, FrameStyle -> Directive[
+                  Opacity[0.5], 
+                  Thickness[Tiny], 
+                  RGBColor[0.368417, 0.506779, 0.709798]], Background -> 
+                GrayLevel[0.94]], 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Input type: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"Image\"", "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Classes: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{",", "\",\"", "1", "2", "3"}, 
+                    "RowWithSeparators"], "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Method: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"RandomForest\"", "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox[
+                    "\"Number of training examples: \"", 
+                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                    TagBox["30", "SummaryItem"]}]}}, 
+                GridBoxAlignment -> {
+                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                GridBoxSpacings -> {
+                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                BaseStyle -> {
+                 ShowStringCharacters -> False, NumberMarks -> False, 
+                  PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+             GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             BaselinePosition -> {1, 1}]}, 
+          Dynamic[Typeset`open$$], ImageSize -> Automatic]}, "SummaryPanel", 
+        DisplayFunction -> (
+         ButtonBox[#, Active -> False, Alignment -> Left, 
+          Appearance -> {
+           "Default" -> 
+            FrontEnd`FileName[{"Typeset", "SummaryBox"}, "Panel.9.png"]}, 
+          FrameMargins -> 7, BaseStyle -> {}, 
+          DefaultBaseStyle -> {"Panel", Background -> None}, BaselinePosition -> 
+          Baseline]& )], DynamicModuleValues :> {}], 
+      StyleBox["]", "NonInterpretableSummary"]}]},
+   "CopyTag",
+   DisplayFunction->(#& ),
+   InterpretationFunction->("ClassifierFunction[\[Ellipsis]]"& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{
+  3.8715298904337673`*^9, {3.8715303014425144`*^9, 3.8715303187168765`*^9}, {
+   3.8715305641512423`*^9, 3.8715305833923497`*^9}, 
+   3.871530668302599*^9},ExpressionUUID->"314fda2f-6308-4d69-8d31-\
+1623938a5b4b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dataTest", " ", "=", " ", 
+  RowBox[{"Import", "[", 
+   RowBox[{"\"\<H:\\\\Documents\\\\testNN\>\"", ",", "\"\<*.bmp\>\""}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.8715300299078755`*^9, 
+  3.87153006551822*^9}},ExpressionUUID->"78df87d6-bdb2-4b16-bacd-\
+f648cdd91f67"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1:eJzt1z8LgkAYx/GjFsfGxnoLTa1ttRpBq5JZi4EG0dTYS2jsZfTSGsuep0EQ
+j/Ps7Dh/Hygy8PqCdH/G4cHf9oQQmZe/+cFplqbBeTnIL1ZJto+TaLNIjlEc
+pdOwn385+b4+n18Af3UnIyK08L08DqrMVT1Ik1+X84gbVeZ6ityoupKq0dbk
+SVRGGxJXq37lQso9O4Iq+azCT7/NHnuq1OfbOVH/j6DKRJXe+lh3fnOjqm4P
+7w1uxESPzVXy9VGO7+1OVZNmvf2nq1VFPA+U21BVBVXqbKviFRNVTc77XavS
+6zF92rKzqu7OoZ0zqZ1VAABQ9AZ2eEEb
+      "], {{0, 50}, {50, 0}}, {0, 255},
+      ColorFunction->RGBColor],
+     BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+     Selectable->False],
+    DefaultBaseStyle->"ImageGraphics",
+    ImageSizeRaw->{50, 50},
+    PlotRange->{{0, 50}, {0, 50}}], ",", 
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
+UFAciCWBGMT+P6TA9u3bFRQUgM4GkvPnz6fQEGRAnoESEhIM2AAHBwepTkLW
+bmFhgcwlyWHIToILAt1DhsPgujIyMuCCCQkJmOYTBO3t7WjmAL0sICAAMSci
+IoJ4ozABspe/f/9Otjn19fVwc5CdShJAS13keQ0ziXp4eJDhNWDKgQcy3D1k
+mDN9+nSs6RwZEJmDNDQ0CBpFZEIFxhExRpEdlaNgkAMAPyls9g==
+      "], {{0, 23}, {25, 0}}, {0, 255},
+      ColorFunction->RGBColor],
+     BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+     Selectable->False],
+    DefaultBaseStyle->"ImageGraphics",
+    ImageSizeRaw->{25, 23},
+    PlotRange->{{0, 25}, {0, 23}}], ",", 
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
+UFAciCWBGMT+Pwr+/9++fbsCGMyfP59CoyQkJBjAgIODg0InMSABSswREBCA
+mxMREUG2UXCvQcD379/JMwcYyAyogAxDIFHGgAHIMAc5fCgxCtk9wHAGhg/Z
+RrW3t0M0ZmRkQEQoTwlwMGrUUDcKWLZQyyhISoMns6EFAM4W2qw=
+      "], {{0, 23}, {25, 0}}, {0, 255},
+      ColorFunction->RGBColor],
+     BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+     Selectable->False],
+    DefaultBaseStyle->"ImageGraphics",
+    ImageSizeRaw->{25, 23},
+    PlotRange->{{0, 25}, {0, 23}}]}], "}"}]], "Output",
+ CellChangeTimes->{3.871530105939017*^9, 3.871530416518137*^9, 
+  3.8715306704153366`*^9},ExpressionUUID->"35314994-ee78-4ab4-9164-\
+368d513917e7"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"testSet", " ", "=", " ", 
+    RowBox[{"{", "}"}]}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.871530136329987*^9, 
+  3.8715301419233427`*^9}},ExpressionUUID->"3498c4a8-da21-472f-8671-\
+a13a47c4988f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"AppendTo", "[", 
+   RowBox[{"testSet", ",", " ", 
+    RowBox[{
+     RowBox[{"dataTest", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "\[Rule]", "3"}]}], "]"}], ";", 
+  RowBox[{"AppendTo", "[", 
+   RowBox[{"testSet", ",", " ", 
+    RowBox[{
+     RowBox[{"dataTest", "[", 
+      RowBox[{"[", "2", "]"}], "]"}], "\[Rule]", "2"}]}], "]"}], ";", 
+  RowBox[{"AppendTo", "[", 
+   RowBox[{"testSet", ",", " ", 
+    RowBox[{
+     RowBox[{"dataTest", "[", 
+      RowBox[{"[", "3", "]"}], "]"}], "\[Rule]", "1"}]}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.871530113157218*^9, 3.8715301561879263`*^9}, {
+  3.8715302563796487`*^9, 
+  3.8715302728922787`*^9}},ExpressionUUID->"77a7cebd-74de-43c2-a093-\
+41cc6bfe48a7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["testSet"], "Input",
+ CellChangeTimes->{{3.8715301590002117`*^9, 
+  3.871530160875038*^9}},ExpressionUUID->"05bda02f-6299-434a-80d6-\
+306ef90e88a8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
+UFAciCWBGMT+P3TA/PnzFRQUGHADoCxQDS7t27dvx68dDXBwcOAyiiRzIACX
+Ue3t7cjKIiIivn//jqlMQkKCoFHEgPr6erg5GRkZ5BmCFpJAN1NoAgR4eHhg
+9TvxJuAPQ1wAlznABDB9+nSS/IUWm2gAKEuSaXhMxpM4iQTAIKJKioIAahkF
+jFbyjMKfu0kyCo85pGYZXOmB7Kw3CpABAF4pJDA=
+       "], {{0, 23}, {25, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{25, 23},
+     PlotRange->{{0, 25}, {0, 23}}], "\[Rule]", "3"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
+UFAciCWBGMT+P6TA9u3bFRQUgM4GkvPnz6fQEGRAnoESEhIM2AAHBwepTkLW
+bmFhgcwlyWHIToILAt1DhsPgujIyMuCCCQkJmOYTBO3t7WjmAL0sICAAMSci
+IoJ4ozABspe/f/9Otjn19fVwc5CdShJAS13keQ0ziXp4eJDhNWDKgQcy3D1k
+mDN9+nSs6RwZEJmDNDQ0CBpFZEIFxhExRpEdlaNgkAMAPyls9g==
+       "], {{0, 23}, {25, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{25, 23},
+     PlotRange->{{0, 25}, {0, 23}}], "\[Rule]", "2"}], ",", 
+   RowBox[{
+    GraphicsBox[
+     TagBox[RasterBox[CompressedData["
+1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
+UFAciCWBGMT+Pwr+/9++fbsCGMyfP59CoyQkJBjAgIODg0InMSABSswREBCA
+mxMREUG2UXCvQcD379/JMwcYyAyogAxDIFHGgAHIMAc5fCgxCtk9wHAGhg/Z
+RrW3t0M0ZmRkQEQoTwlwMGrUUDcKWLZQyyhISoMns6EFAM4W2qw=
+       "], {{0, 23}, {25, 0}}, {0, 255},
+       ColorFunction->RGBColor],
+      BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+      Selectable->False],
+     DefaultBaseStyle->"ImageGraphics",
+     ImageSizeRaw->{25, 23},
+     PlotRange->{{0, 25}, {0, 23}}], "\[Rule]", "1"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.871530161359381*^9, {3.871530276439352*^9, 
+   3.8715302831345725`*^9}},ExpressionUUID->"55fb727d-161d-4b4e-9abd-\
+48722c46550b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Ne", "[", "dataTest", "]"}]], "Input",
+ CellChangeTimes->{{3.871530291497986*^9, 3.8715303352637405`*^9}, {
+  3.8715304963277845`*^9, 3.871530503124205*^9}, {3.8715305681326127`*^9, 
+  3.871530578481495*^9}, {3.871530609446559*^9, 3.871530619611745*^9}, {
+  3.8715306777022796`*^9, 
+  3.871530738006208*^9}},ExpressionUUID->"e460282f-3b6f-40fd-8219-\
+4d37ff59995e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"3", ",", "2", ",", "1"}], "}"}]], "Output",
+ CellChangeTimes->{{3.8715306942676067`*^9, 
+  3.871530739131118*^9}},ExpressionUUID->"18dd29ab-ada9-4f5a-8228-\
+11affe7455c9"]
+}, Open  ]]
+},
+WindowSize->{759, 833},
+WindowMargins->{{Automatic, 572}, {124, Automatic}},
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 989, 24, 140, "Input",ExpressionUUID->"01a72773-6b15-4da7-902f-7213409d1139"],
+Cell[CellGroupData[{
+Cell[1572, 48, 2079, 58, 346, "Input",ExpressionUUID->"0a3dee17-74d2-4be8-80d6-22cf1ec09368"],
+Cell[3654, 108, 23063, 493, 195, "Output",ExpressionUUID->"30c97fe1-142a-49b6-9652-2591c0f5c301"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26754, 606, 1311, 32, 197, "Input",ExpressionUUID->"b669c0a4-23d9-4220-9f7a-53123235a974"],
+Cell[28068, 640, 23527, 516, 321, "Output",ExpressionUUID->"a834dbde-c223-4d01-a76b-01c86b652236"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51632, 1161, 306, 8, 48, "Input",ExpressionUUID->"bd617d54-2709-49ac-b675-0fe1e83cbbaf"],
+Cell[51941, 1171, 737, 17, 67, "Output",ExpressionUUID->"9b5ed92e-5708-45df-b310-0695c52e97b1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52715, 1193, 288, 6, 45, "Input",ExpressionUUID->"5c40b004-ea14-41c3-86bf-6d3037292125"],
+Cell[53006, 1201, 9705, 195, 71, "Output",ExpressionUUID->"314fda2f-6308-4d69-8d31-1623938a5b4b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62748, 1401, 298, 7, 45, "Input",ExpressionUUID->"78df87d6-bdb2-4b16-bacd-f648cdd91f67"],
+Cell[63049, 1410, 2080, 47, 69, "Output",ExpressionUUID->"35314994-ee78-4ab4-9164-368d513917e7"]
+}, Open  ]],
+Cell[65144, 1460, 268, 7, 48, "Input",ExpressionUUID->"3498c4a8-da21-472f-8671-a13a47c4988f"],
+Cell[65415, 1469, 746, 21, 119, "Input",ExpressionUUID->"77a7cebd-74de-43c2-a093-41cc6bfe48a7"],
+Cell[CellGroupData[{
+Cell[66186, 1494, 161, 3, 28, "Input",ExpressionUUID->"05bda02f-6299-434a-80d6-306ef90e88a8"],
+Cell[66350, 1499, 2150, 50, 42, "Output",ExpressionUUID->"55fb727d-161d-4b4e-9abd-48722c46550b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68537, 1554, 389, 7, 28, "Input",ExpressionUUID->"e460282f-3b6f-40fd-8219-4d37ff59995e"],
+Cell[68929, 1563, 211, 5, 89, "Output",ExpressionUUID->"18dd29ab-ada9-4f5a-8228-11affe7455c9"]
+}, Open  ]]
+}
+]
+*)
+
